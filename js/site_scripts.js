@@ -24,3 +24,21 @@ document.addEventListener('DOMContentLoaded', function() {
         ul.appendChild(li);
     });
 });
+
+//Contact Drop Down//
+document.addEventListener("DOMContentLoaded", function () {
+    const contactMethod = document.getElementById("contact-method");
+    const emailInput = document.getElementById("email-input");
+    const phoneInput = document.getElementById("phone-input");
+
+    contactMethod.addEventListener("change", function () {
+        emailInput.classList.add("hidden");
+        phoneInput.classList.add("hidden");
+
+        if (contactMethod.value === "email") {
+            emailInput.classList.remove("hidden");
+        } else if (contactMethod.value === "phone") {
+            phoneInput.classList.remove("hidden");
+        }
+    });
+});
